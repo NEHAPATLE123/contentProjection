@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <ng-content select="h1"></ng-content>
+        <table class="table table-bordered" [ngStyle]="{backgroundColor:'brown'}">
+            <thead>
+                <tr>
+                    <th>SrNo.</th>
+                    <th>name</th>
+                    <th>surname</th>
+                    <th>village</th>
+                    <th>education</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <ng-content select="tr"></ng-content>
+            </tbody>
+        </table>
+
+    </div>
+  </div>

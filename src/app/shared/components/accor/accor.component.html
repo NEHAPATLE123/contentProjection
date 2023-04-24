@@ -1,0 +1,21 @@
+
+<div class="card">
+
+    <div class="card-header" (click)="(this.isExpanded =  !this.isExpanded)" >
+        <h1>
+            <ng-content select="strong"></ng-content>
+            <!-- <strong>{{arr.header}}</strong> -->
+            <fa-icon [icon]="carotDown" [ngClass]="{'d-none': isExpanded}" class="float-right"> </fa-icon>
+            <fa-icon [icon]="carotUp"   [ngClass]="{'d-none': !isExpanded}" class="float-right"> </fa-icon>
+            <!-- <fa-icon [icon]="carotUp" class="float-right"></fa-icon> -->
+        </h1>
+    </div>
+
+    <div class="card-body" [class.d-none]="!isExpanded" >
+        <ng-content select="p"></ng-content>
+        <!-- <p> -->
+            <!-- {{arr.body}} -->
+        <!-- </p> -->
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+ <!-- 21 CONTENT PROJECTION -->
+<h1 class="bg-warning text-center">Content Projection</h1>
+<div class="container mt-4">
+
+  <div class="row mb-4">
+    <div class="col-md-8 offset-md-2">
+      <app-accor *ngFor="let arr of array">
+          <strong>{{arr.header}}</strong>
+          <p>{{arr.body}}</p>
+      </app-accor>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <!-- <div class="col-12">
+      <app-test>
+        <h1> This is a heading for Test Component</h1>
+        <h2>kkkkkkkkkkkkkkkkkk</h2>
+      </app-test>
+    </div> -->
+
+    <div class="col-sm-6">
+     <app-auth-from>
+        <h2> Create a Account</h2>
+        <button class="btn btn-primary">
+          Sign Up
+        </button>
+     </app-auth-from>
+    </div>
+    <div class="col-sm-6">
+      <app-auth-from>
+        <h2> Login In </h2>
+        <button class="btn btn-primary">
+          Log IN
+        </button>
+      </app-auth-from>
+    </div>
+   </div>
+
+  <hr>
+</div>
+
+  <!-- app-table -->
+    
+
+<h1 class="bg-success text-center"> Table for Content Projection </h1>
+ <app-table>
+
+  <tr *ngFor="let tab of tableArray; index as i" [ngStyle]="{color:'blue', backgroundColor:'yellow'}">
+    <td>{{tab.SrNo}}</td>
+    <td>{{tab.name}}</td>
+    <td>{{tab.surname}}</td>
+    <td>{{tab.village}}</td>
+    <td>{{tab.education}}</td>  
+  </tr>
+
+ </app-table>
+      
+      
+
+
+<hr>
+
